@@ -72,6 +72,19 @@ _MINIMAX_MODELS: Dict[str, List[ModelOption]] = {
     ],
 }
 
+_MIMO_MODELS: Dict[str, List[ModelOption]] = {
+    "quick": [
+        ("mimo-v2.5-pro", "mimo-v2.5-pro"),
+        ("mimo-v2.5", "mimo-v2.5"),
+        ("Custom model ID", "custom"),
+    ],
+    "deep": [
+        ("mimo-v2.5-pro", "mimo-v2.5-pro"),
+        ("mimo-v2.5", "mimo-v2.5"),
+        ("Custom model ID", "custom"),
+    ],
+}
+
 
 MODEL_OPTIONS: ProviderModeOptions = {
     "openai": {
@@ -153,6 +166,7 @@ MODEL_OPTIONS: ProviderModeOptions = {
     # so the two provider keys share one model list.
     "minimax": _MINIMAX_MODELS,
     "minimax-cn": _MINIMAX_MODELS,
+    "mimo": _MIMO_MODELS,
     # OpenRouter: fetched dynamically. Azure: any deployed model name.
     # Ollama display labels intentionally omit a "local" marker — the
     # endpoint is now configurable via OLLAMA_BASE_URL, so the same labels
